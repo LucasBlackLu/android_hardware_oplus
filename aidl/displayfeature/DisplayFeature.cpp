@@ -42,6 +42,14 @@ DisplayFeature::DisplayFeature() : mDeviceInfo(nullptr) {
         SetProperty("sys.sun.feature.touch_gesture.oplus", "true");
         goto END;
     }
+    // OnePlus Ace 3 Pro
+    if (deviceName == "corvette") {
+        mDeviceInfo = &CONFIG_OPACE3P;
+        SetProperty("sys.sun.feature.display.dc_alias_one_pulse", "true");
+        SetProperty("sys.sun.feature.touch_gesture.bit", "78068");
+        SetProperty("sys.sun.feature.touch_gesture.oplus", "true");
+        goto END;
+    }
     // OnePlus 12R
     if (deviceName == "aston") {
         mDeviceInfo = &CONFIG_OP12R;

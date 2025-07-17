@@ -36,6 +36,11 @@ Battery::Battery() : mDeviceInfo(nullptr) {
         mDeviceInfo = &CONFIG_OP12;
         goto END;
     }
+    // OnePlus Ace 3 Pro
+    if (deviceName == "corvette") {
+        mDeviceInfo = &CONFIG_OPACE3P;
+        goto END;
+    }
     // OnePlus 12R
     if (deviceName == "aston") {
         mDeviceInfo = &CONFIG_OP12R;
